@@ -67,7 +67,7 @@
                         <div class="headnav">
                             <ul>
                                 <li><a href="#mySignup" data-toggle="modal"><i class="icon-user"></i> Đăng ký</a></li>
-                                <li><a href="#mySignin" data-toggle="modal">Sign in</a></li>
+                                <li><a href="#mySignin" data-toggle="modal">Đăng nhập</a></li>
                             </ul>
                         </div>
                         <!-- Signup Modal -->
@@ -85,23 +85,23 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label class="control-label" for="inputSignupPassword">Password</label>
+                                        <label class="control-label" for="inputSignupPassword">Mật khẩu</label>
                                         <div class="controls">
-                                            <input type="password" id="inputSignupPassword" placeholder="Password">
+                                            <input type="password" id="inputSignupPassword" placeholder="Mật khẩu">
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label class="control-label" for="inputSignupPassword2">Confirm Password</label>
+                                        <label class="control-label" for="inputSignupPassword2">Nhập lại mật khẩu</label>
                                         <div class="controls">
-                                            <input type="password" id="inputSignupPassword2" placeholder="Password">
+                                            <input type="password" id="inputSignupPassword2" placeholder="Mật khẩu">
                                         </div>
                                     </div>
                                     <div class="control-group">
                                         <div class="controls">
-                                            <button type="submit" class="btn">Sign up</button>
+                                            <button type="submit" class="btn">Đăng ký</button>
                                         </div>
                                         <p class="aligncenter margintop20">
-                                            Already have an account? <a href="#mySignin" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Sign in</a>
+                                            Bạn chưa có tài khoản? <a href="#mySignin" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Đăng ký</a>
                                         </p>
                                     </div>
                                 </form>
@@ -117,23 +117,23 @@
                             <div class="modal-body">
                                 <form class="form-horizontal">
                                     <div class="control-group">
-                                        <label class="control-label" for="inputText">Username</label>
+                                        <label class="control-label" for="inputText">Tên đăng nhập</label>
                                         <div class="controls">
-                                            <input type="text" id="inputText" placeholder="Username">
+                                            <input type="text" id="inputText" placeholder="Tên đăng nhập">
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label class="control-label" for="inputSigninPassword">Password</label>
+                                        <label class="control-label" for="inputSigninPassword">Mật khẩu</label>
                                         <div class="controls">
-                                            <input type="password" id="inputSigninPassword" placeholder="Password">
+                                            <input type="password" id="inputSigninPassword" placeholder="Mật khẩu">
                                         </div>
                                     </div>
                                     <div class="control-group">
                                         <div class="controls">
-                                            <button type="submit" class="btn">Sign in</button>
+                                            <button type="submit" class="btn">Đăng nhập</button>
                                         </div>
                                         <p class="aligncenter margintop20">
-                                            Forgot password? <a href="#myReset" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Reset</a>
+                                            Quân mật khẩu? <a href="#myReset" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Đặt lại mật khẩu</a>
                                         </p>
                                     </div>
                                 </form>
@@ -156,10 +156,10 @@
                                     </div>
                                     <div class="control-group">
                                         <div class="controls">
-                                            <button type="submit" class="btn">Reset password</button>
+                                            <button type="submit" class="btn">Đặt lại mật khẩu</button>
                                         </div>
                                         <p class="aligncenter margintop20">
-                                            We will send instructions on how to reset your password to your inbox
+
                                         </p>
                                     </div>
                                 </form>
@@ -172,7 +172,7 @@
                     <div class="span4">
                         <div class="logo">
                             <a href="index.html"><img src="{{asset("assets/public/asset/img/")}}/logo.png" alt="" class="logo" /></a>
-                            <h1>Flat and trendy bootstrap template</h1>
+
                         </div>
                     </div>
                     <div class="span8">

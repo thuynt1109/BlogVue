@@ -43,7 +43,7 @@
                       <li v-if="post.category"><i class="icon-folder-open"></i><a href="#"> {{post.category.cat_name}}</a></li>
                       <li><i class="icon-comments"></i><a href="#">4 Comments</a></li>
                     </ul>
-                    <router-link :to="`/blog/${post.id}`" class="pull-right">Continue reading <i class="icon-angle-right"></i></router-link>
+                    <router-link :to="`/blog/${post.id}`" class="pull-right">Xem chi tiết<i class="icon-angle-right"></i></router-link>
                   </div>
                 </div>
               </div>
