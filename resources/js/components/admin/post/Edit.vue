@@ -19,7 +19,7 @@
                                     <has-error :form="form" field="title"></has-error>
                                 </div>
                                 <div class="form-group">
-                                    <label for="descriptionId">Thêm chi tiết tin tức</label>
+                                    <label for="descriptionId">Nội dung</label>
 
                                     <markdown-editor v-model="form.description"></markdown-editor>
 
@@ -27,7 +27,7 @@
                                 </div>
 
                                 <div class="form-group" >
-                                    <label>Select</label>
+                                    <label>Danh mục</label>
                                     <select class="form-control" :class="{ 'is-invalid': form.errors.has('cat_id') }" v-model="form.cat_id">
                                         <option disabled value="">Select One</option>
                                         <option :value="category.id" v-for="category in getallCategory">{{category.cat_name}}</option>
@@ -45,7 +45,7 @@
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button type="submit" class="btn btn-primary">Lưu</button>
                             </div>
                         </form>
                     </div>

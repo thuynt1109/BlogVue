@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Flattern - Flat and trendy bootstrap site template</title>
+    <title>Tin24h</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -28,12 +28,7 @@
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
     <link rel="shortcut icon" href="ico/favicon.png" />
 
-    <!-- =======================================================
-      Theme Name: Flattern
-      Theme URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
-      Author: BootstrapMade.com
-      Author URL: https://bootstrapmade.com
-    ======================================================= -->
+
 </head>
 
 <body>
@@ -170,8 +165,8 @@
                 </div>
                 <div class="row">
                     <div class="span4">
-                        <div class="logo">
-                            <a href="index.html"><img src="{{asset("assets/public/asset/img/")}}/logo.png" alt="" class="logo" /></a>
+                        <div class="logo" style="width:30%;height:10%">
+                            <a href="#"><img src="{{asset("assets/public/asset/img/")}}/logo3.png" alt="" class="logo" /></a>
 
                         </div>
                     </div>
@@ -188,7 +183,7 @@
                                             </ul>
                                         </li>
                                         <li >
-                                            <a href="#">Trang chủ </a>
+                                            <router-link to="/home">Trang chủ </router-link>
 
                                         </li>
 
@@ -198,7 +193,7 @@
                                         </li>
                                         <li>
 
-                                       <router-link to="/blog">Liên hệ </router-link>
+                                       <router-link to="/contact">Liên hệ </router-link>
 
                                         </li>
                                     </ul>
@@ -218,34 +213,20 @@
                 <div class="row">
                     <div class="span3">
                         <div class="widget">
-                            <h5 class="widgetheading">Browse pages</h5>
-                            <ul class="link-list">
-                                <li><a href="#">About our company</a></li>
-                                <li><a href="#">Our services</a></li>
-                                <li><a href="#">Meet our team</a></li>
-                                <li><a href="#">Explore our portfolio</a></li>
-                                <li><a href="#">Get in touch with us</a></li>
-                            </ul>
+                            <h5 class="widgetheading">Giới thiệu</h5>
+
                         </div>
                     </div>
                     <div class="span3">
                         <div class="widget">
-                            <h5 class="widgetheading">Important stuff</h5>
-                            <ul class="link-list">
-                                <li><a href="#">Press release</a></li>
-                                <li><a href="#">Terms and conditions</a></li>
-                                <li><a href="#">Privacy policy</a></li>
-                                <li><a href="#">Career center</a></li>
-                                <li><a href="#">Flattern forum</a></li>
-                            </ul>
+                            <h5 class="widgetheading">Góp ý</h5>
+
                         </div>
                     </div>
                     <div class="span3">
                         <div class="widget">
-                            <h5 class="widgetheading">Flickr photostream</h5>
-                            <div class="flickr_badge">
-                                <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=8&amp;display=random&amp;size=s&amp;layout=x&amp;source=user&amp;user=34178660@N03"></script>
-                            </div>
+                            <h5 class="widgetheading">Đầu trang</h5>
+
                             <div class="clear">
                             </div>
                         </div>
@@ -254,11 +235,11 @@
                         <div class="widget">
                             <h5 class="widgetheading"></h5>
                             <address>
-                               280 An Dương Vương,Phường 4,Quận 5 ,Thành Phố Hồ Chí Minh
+                               280 An Dương Vương-Phường 4-Quận 5-Thành Phố Hồ Chí Minh
                             </address>
                             <p>
                                 <i class="icon-phone"></i> 0327542020 <br>
-                                <i class="icon-envelope-alt">  thuybinh1110@gmail.com</i>
+                                <i class="icon-envelope-alt">  thuybinh11997@gmail.com</i>
                             </p>
                         </div>
                     </div>
@@ -268,20 +249,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="span6">
-                            <div class="copyright">
-                                <p>
-                                    <span>&copy; Flattern - All right reserved.</span>
-                                </p>
-                                <div class="credits">
-                                    <!--
-                                      All the links in the footer should remain intact.
-                                      You can delete the links only if you purchased the pro version.
-                                      Licensing information: https://bootstrapmade.com/license/
-                                      Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Flattern
-                                    -->
-                                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                                </div>
-                            </div>
+
                         </div>
                         <div class="span6">
                             <ul class="social-network">

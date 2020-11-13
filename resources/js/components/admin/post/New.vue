@@ -19,7 +19,7 @@
                                     <has-error :form="form" field="title"></has-error>
                                 </div>
                                 <div class="form-group">
-                                    <label for="descriptionId">Thêm mô tả</label>
+                                    <label for="descriptionId">Nội dung</label>
 
                                     <markdown-editor v-model="form.description"></markdown-editor>
 
@@ -29,14 +29,14 @@
                                 <div class="form-group" >
                                     <label>Chọn danh mục</label>
                                     <select class="form-control" :class="{ 'is-invalid': form.errors.has('cat_id') }" v-model="form.cat_id">
-                                        <option disabled value="">Chọn một trong số các danh mục</option>
-                                        <option :value="category.id" v-for="category in getallCategory">option {{category.cat_name}}</option>
+                                        <option disabled value="">Chọn danh mục</option>
+                                        <option :value="category.id" v-for="category in getallCategory"> {{category.cat_name}}</option>
 
                                     </select>
                                     <has-error :form="form" field="cat_id"></has-error>
                                 </div>
                                 <div class="form-group" >
-                                    <input @change = "changePhoto($event)" name="photo" type="file" :class="{ 'is-invalid': form.errors.has('photo') }">
+                                  <input  @change = "changePhoto($event)" name="photo" type="file" :class="{ 'is-invalid': form.errors.has('photo') }">
                                     <img :src="form.photo" alt="" width="80" height="80">
                                     <has-error :form="form" field="photo"></has-error>
                                 </div>
@@ -87,8 +87,8 @@
                  if(file.size>1048576){
                      swal({
                          type: 'error',
-                         title: 'Oops...',
-                         text: 'Something went wrong!',
+                         title: '',
+                         text: 'Xẩy ra lỗi!',
                          footer: '<a href>Why do I have this issue?</a>'
                      })
                  }else{
@@ -107,7 +107,7 @@
                         this.$router.push('/post-list')
                         toast({
                             type: 'success',
-                            title: 'Post Added successfully'
+                            title: 'Đã thêm thành công !'
                         })
                     })
                     .catch(()=>{

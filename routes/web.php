@@ -50,6 +50,8 @@ Route::get('/categorypost/{id}','BlogController@get_all_post_by_cat_id');
 Route::get('/search','BlogController@search_post');
 Route::get('/latestpost','BlogController@latest_post');
 
+Route::get('/homepost','BlogController@get_all_blog_post');
+
 
 
 

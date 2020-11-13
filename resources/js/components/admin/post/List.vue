@@ -24,8 +24,9 @@
                                     <th>Người đăng</th>
                                     <th>Danh mục</th>
                                     <th>Tiêu đề</th>
-                                    <th>Mô tả</th>
+                                    <th>Nội dung</th>
                                     <th>Ảnh</th>
+                                    <th>Ngày đăng</th>
                                     <th>Tác vụ</th>
 
                                 </tr>
@@ -39,9 +40,11 @@
                                     <td>{{post.title | sortlength(20,"---")}}</td>
                                     <td>{{post.description | sortlength(40,"....")}}</td>
                                     <td><img :src="ourImage(post.photo)" alt="" width="40" height="50"></td>
+                                    <td>{{post.created_at}}</td>
                                     <td>
                                         <router-link :to="`edit-post/${post.id}`">Sửa</router-link>
                                         <a href="" @click.prevent = "deletePost(post.id)" >Xóa</a>
+
 
                                     </td>
                                 </tr>
@@ -79,11 +82,13 @@
             },
             deletePost(id){
                axios.get('/delete/'+id)
+
+
                    .then(()=>{
                        this.$store.dispatch('gelAllPost')
                        toast({
                            type: 'success',
-                           title: 'Post Deleted successfully'
+                           title: 'Xóa thành công'
                        })
                    })
                    .catch(()=>{

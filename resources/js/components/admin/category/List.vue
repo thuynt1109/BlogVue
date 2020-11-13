@@ -9,7 +9,7 @@
 
                             <div class="card-tools">
                                 <button class="btn btn-primary">
-                                    <router-link to="/add-category" style="color:#fff"> Add Category</router-link>
+                                    <router-link to="/add-category" style="color:#fff">Thêm danh mục</router-link>
                                 </button>
                             </div>
                         </div>
@@ -21,17 +21,17 @@
                                 <tr>
                                     <th>
                                         <select name="" id="" v-model="select" @change="deleteSelected">
-                                            <option value="">Select</option>
-                                            <option value="">Delete all</option>
+                                            <option value="">Xem tất cả</option>
+                                            <option value="">Xóa tất cả</option>
                                         </select><br>
                                         <input type="checkbox" @click.prevent="selectAll" v-model="all_select">
-                                        <span v-if="all_select==false">Check All</span>
-                                        <span v-else>Uncheck All</span>
+                                        <span v-if="all_select==false">Chọn tất cả</span>
+                                        <span v-else>Hủy chọn</span>
                                     </th>
-                                    <th>Sl</th>
-                                    <th>Name</th>
-                                    <th>Date</th>
-                                    <th>Actions</th>
+                                    <th>Stt</th>
+                                    <th>Tên</th>
+                                    <th>Ngày tạo</th>
+                                    <th>Tác vụ</th>
 
                                 </tr>
                                 </thead>
@@ -43,8 +43,8 @@
                                     <td>{{category.cat_name}}</td>
                                     <td>{{category.created_at | timeformat}}</td>
                                     <td>
-                                        <router-link :to="`/edit-category/${category.id}`">Edit</router-link>
-                                        <a href="" @click.prevent = "deletecategory(category.id)" >Delete</a>
+                                        <router-link :to="`/edit-category/${category.id}`">Sửa</router-link>
+                                        <a href="" @click.prevent = "deletecategory(category.id)" >Xóa</a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -89,7 +89,7 @@
                        this.$store.dispatch("allCategory")
                        toast({
                            type: 'success',
-                           title: 'Category Deleted successfully'
+                           title: 'Xóa danh mục thành công!'
                        })
                    })
                    .catch(()=>{
@@ -104,7 +104,7 @@
                        this.$store.dispatch("allCategory")
                        toast({
                            type: 'success',
-                           title: 'Category Deleted successfully'
+                           title: 'Đã xóa thành công!'
                        })
 
                    })

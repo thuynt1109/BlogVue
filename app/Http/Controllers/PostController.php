@@ -19,8 +19,8 @@ class PostController extends Controller
     public function save_post(Request $request){
 
         $this->validate($request,[
-            'title'=>'required|min:2|max:50',
-            'description'=>'required|min:2|max:1000'
+            'title'=>'required|min:2|max:5000',
+            'description'=>'required|min:2|max:10000'
         ]);
         $strpos = strpos($request->photo,';');
         $sub = substr($request->photo,0,$strpos);
@@ -55,8 +55,8 @@ class PostController extends Controller
     public function update_post(Request $request, $id){
         $post = Post::find($id);
         $this->validate($request,[
-            'title'=>'required|min:2|max:50',
-            'description'=>'required|min:2|max:1000'
+            'title'=>'required|min:2|max:1000',
+            'description'=>'required|min:2|max:10000'
         ]);
 
 

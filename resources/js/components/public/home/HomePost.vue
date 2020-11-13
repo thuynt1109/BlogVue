@@ -1,5 +1,5 @@
 <template>
-    <span id="blogpost">
+    <span id="homepost">
          <!-- end header -->
     <section id="inner-headline">
       <div class="container">
@@ -12,7 +12,7 @@
           <div class="span8">
             <ul class="breadcrumb">
               <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
-              <li><a href="#">Tin tức</a><i class="icon-angle-right"></i></li>
+              <li><a href="#">Trang chủ</a><i class="icon-angle-right"></i></li>
 
             </ul>
           </div>
@@ -49,14 +49,9 @@
               </div>
             </article>
 
-            <div id="pagination">
-              <span class="all">Page 1 of 3</span>
-              <span class="current">1</span>
-              <a href="#" class="inactive">2</a>
-              <a href="#" class="inactive">3</a>
-            </div>
+
           </div>
-         <BlogSidebar/>
+
         </div>
       </div>
     </section>
@@ -64,11 +59,11 @@
 </template>
 
 <script>
-    import BlogSidebar from "./BlogSidebar.vue"
+
     export default {
-        name: "BlogPost",
+        name: "HomePost",
         components:{
-            BlogSidebar
+
         },
         mounted(){
             this.$store.dispatch('getblogPost');

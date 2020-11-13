@@ -12,7 +12,7 @@ class CategoryController extends Controller
         $this->middleware('auth');
     }
     public function add_category(Request $request){
-		
+
         $this->validate($request,[
             'cat_name'=>'required|min:2|max:50'
         ]);
@@ -39,7 +39,7 @@ class CategoryController extends Controller
     }
     public function update_category(Request $request,$id){
         $this->validate($request,[
-            'cat_name'=>'required|min:2|max:50'
+            'cat_name'=>'required|min:2|max:500'
         ]);
         $category = Category::find($id);
         $category->cat_name = $request->cat_name;

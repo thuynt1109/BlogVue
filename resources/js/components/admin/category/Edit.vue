@@ -7,15 +7,15 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Edit Category</h3>
+                            <h3 class="card-title">Sửa danh mục</h3>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
                         <form role="form" @submit.prevent="updateCategory()">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="categoryId">Edit Category</label>
-                                    <input type="text" class="form-control" id="categoryId" placeholder="Add New Category" v-model="form.cat_name" name="cat_name" :class="{ 'is-invalid': form.errors.has('cat_name') }">
+                                    <label for="categoryId">Sửa dnh mục</label>
+                                    <input type="text" class="form-control" id="categoryId" placeholder="Sửa danh mục" v-model="form.cat_name" name="cat_name" :class="{ 'is-invalid': form.errors.has('cat_name') }">
                                     <has-error :form="form" field="cat_name"></has-error>
                                 </div>
 
@@ -23,7 +23,7 @@
                             <!-- /.card-body -->
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary">Update</button>
+                                <button type="submit" class="btn btn-primary">Lưu</button>
                             </div>
                         </form>
                     </div>
