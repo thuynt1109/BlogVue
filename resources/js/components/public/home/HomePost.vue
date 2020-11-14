@@ -21,39 +21,35 @@
     </section>
     <section id="content">
       <div class="container">
-        <div class="row">
-          <div class="span8">
+
 
             <article v-for="post in blogpost">
               <div class="row">
-                <div class="span8">
+                <div class="span4">
                   <div class="post-image">
                     <div class="post-heading">
-                      <h3><a href="#">{{post.title}}</a></h3>
+                      <h6><router-link :to="`/blog/${post.id}`" href="#">{{post.title}}</router-link></h6>
                     </div>
                     <img :src="`uploadimage/${post.photo}`" alt="" />
                   </div>
                   <p>
                    {{post.description | sortlength(500,"...")}}
                   </p>
-                  <div class="bottom-article">
-                    <ul class="meta-post">
+                  <!-- <div class="bottom-article"> -->
+                    <!-- <ul class="meta-post">
                       <li><i class="icon-calendar"></i><a href="#"> {{post.user.created_at}}</a></li>
                       <li v-if="post.user"><i class="icon-user"></i><a href="#">{{post.user.name}}</a></li>
                       <li v-if="post.category"><i class="icon-folder-open"></i><a href="#"> {{post.category.cat_name}}</a></li>
                       <li><i class="icon-comments"></i><a href="#">4 Comments</a></li>
-                    </ul>
+                    </ul> -->
                     <router-link :to="`/blog/${post.id}`" class="pull-right">Xem chi tiết<i class="icon-angle-right"></i></router-link>
-                  </div>
+                  <!-- </div> -->
                 </div>
               </div>
             </article>
 
 
           </div>
-
-        </div>
-      </div>
     </section>
     </span>
 </template>
