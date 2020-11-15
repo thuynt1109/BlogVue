@@ -9,7 +9,7 @@
 
                             <div class="card-tools">
                                 <button class="btn btn-primary">
-                                    <router-link to="/add-post" style="color:#fff">Thêm tin tức mới</router-link>
+                                    <router-link to="/add-post"  style="color:#fff ;text-decoration:none">Thêm tin tức mới</router-link>
                                 </button>
                             </div>
                         </div>
@@ -41,9 +41,9 @@
                                     <td>{{post.description | sortlength(40,"....")}}</td>
                                     <td><img :src="ourImage(post.photo)" alt="" width="40" height="50"></td>
                                     <td>{{post.created_at}}</td>
-                                    <td>
-                                        <router-link :to="`edit-post/${post.id}`">Sửa</router-link>
-                                        <a href="" @click.prevent = "deletePost(post.id)" >Xóa</a>
+                                    <td class="d-flex">
+                                        <button class="btn btn-success mr-2 "><router-link :to="`edit-post/${post.id}`" class="text-white " style="text-decoration:none">Sửa</router-link> </button>
+                                        <button class="btn btn-danger "><a href="" @click.prevent = "deletePost(post.id)" class="text-white " >Xóa</a></button>
 
 
                                     </td>

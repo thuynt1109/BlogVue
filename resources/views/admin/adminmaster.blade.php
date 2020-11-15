@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Blank Page</title>
+    <title>Tin24h</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
@@ -33,8 +33,8 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a href="../../index3.html" class="brand-link">
-            <img src="{{asset('assets/admin/default/admin.png')}}"
+        <a href="#" class="brand-link">
+            <img src="{{asset('assets/admin/default/admin2.jpg')}}"
                  alt="AdminLTE Logo"
                  class="brand-image img-circle elevation-3"
                  style="opacity: .8">
@@ -50,7 +50,7 @@
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                     <li class="nav-item has-treeview">
-                        <router-link to="/home" class="nav-link">
+                        <router-link to="/admin" class="nav-link">
                             <i class="nav-icon fa fa-dashboard"></i>
                             <p>
                                Trang chủ
@@ -76,6 +76,19 @@
                             </p>
                         </router-link>
                     </li>
+                    <li class="nav-item ">
+
+                        <a class="nav-link" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                     <i class="nav-icon fa fa-power-off power-color"></i>
+                                                  <p>{{ __('Đăng xuất') }}</p>
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                    </li>
 
                 </ul>
             </nav>
@@ -93,10 +106,9 @@
 
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">
-            <b>Version</b> 1.0
+
         </div>
-        <strong>Copyright &copy; 2014-2018 <a href="http://sumon-it.com">FullStack Web</a>.</strong> All rights
-        reserved.
+        <strong>
     </footer>
 
     <!-- Control Sidebar -->

@@ -14,7 +14,7 @@
                         <form role="form" @submit.prevent="updateCategory()">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="categoryId">Sửa dnh mục</label>
+                                    <label for="categoryId">Sửa danh mục</label>
                                     <input type="text" class="form-control" id="categoryId" placeholder="Sửa danh mục" v-model="form.cat_name" name="cat_name" :class="{ 'is-invalid': form.errors.has('cat_name') }">
                                     <has-error :form="form" field="cat_name"></has-error>
                                 </div>

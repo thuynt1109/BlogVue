@@ -9,7 +9,7 @@
 
                             <div class="card-tools">
                                 <button class="btn btn-primary">
-                                    <router-link to="/add-category" style="color:#fff">Thêm danh mục</router-link>
+                                    <router-link to="/add-category" style="text-decoration:none" class="text-white">Thêm danh mục</router-link>
                                 </button>
                             </div>
                         </div>
@@ -43,8 +43,8 @@
                                     <td>{{category.cat_name}}</td>
                                     <td>{{category.created_at | timeformat}}</td>
                                     <td>
-                                        <router-link :to="`/edit-category/${category.id}`">Sửa</router-link>
-                                        <a href="" @click.prevent = "deletecategory(category.id)" >Xóa</a>
+                                       <button class="btn btn-success "><router-link :to="`/edit-category/${category.id}`" class="text-white " style="text-decoration:none">Sửa</router-link> </button>
+                                       <button class="btn btn-danger "> <a class="text-white" @click.prevent = "deletecategory(category.id)" >Xóa</a> </button>
                                     </td>
                                 </tr>
                                 </tbody>

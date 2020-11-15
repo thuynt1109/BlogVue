@@ -89206,7 +89206,8 @@ var render = function() {
                     _c(
                       "router-link",
                       {
-                        staticStyle: { color: "#fff" },
+                        staticClass: "text-white",
+                        staticStyle: { "text-decoration": "none" },
                         attrs: { to: "/add-category" }
                       },
                       [_vm._v("Thêm danh mục")]
@@ -89386,21 +89387,29 @@ var render = function() {
                           )
                         ]),
                         _vm._v(" "),
-                        _c(
-                          "td",
-                          [
-                            _c(
-                              "router-link",
-                              {
-                                attrs: { to: "/edit-category/" + category.id }
-                              },
-                              [_vm._v("Sửa")]
-                            ),
-                            _vm._v(" "),
+                        _c("td", [
+                          _c(
+                            "button",
+                            { staticClass: "btn btn-success " },
+                            [
+                              _c(
+                                "router-link",
+                                {
+                                  staticClass: "text-white ",
+                                  staticStyle: { "text-decoration": "none" },
+                                  attrs: { to: "/edit-category/" + category.id }
+                                },
+                                [_vm._v("Sửa")]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("button", { staticClass: "btn btn-danger " }, [
                             _c(
                               "a",
                               {
-                                attrs: { href: "" },
+                                staticClass: "text-white",
                                 on: {
                                   click: function($event) {
                                     $event.preventDefault()
@@ -89410,9 +89419,8 @@ var render = function() {
                               },
                               [_vm._v("Xóa")]
                             )
-                          ],
-                          1
-                        )
+                          ])
+                        ])
                       ])
                     })
                   )
@@ -89914,7 +89922,7 @@ var render = function() {
                     { staticClass: "form-group" },
                     [
                       _c("label", { attrs: { for: "categoryId" } }, [
-                        _vm._v("Sửa dnh mục")
+                        _vm._v("Sửa danh mục")
                       ]),
                       _vm._v(" "),
                       _c("input", {
@@ -91240,7 +91248,10 @@ var render = function() {
                     _c(
                       "router-link",
                       {
-                        staticStyle: { color: "#fff" },
+                        staticStyle: {
+                          color: "#fff",
+                          "text-decoration": "none"
+                        },
                         attrs: { to: "/add-post" }
                       },
                       [_vm._v("Thêm tin tức mới")]
@@ -91302,18 +91313,29 @@ var render = function() {
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(post.created_at))]),
                         _vm._v(" "),
-                        _c(
-                          "td",
-                          [
-                            _c(
-                              "router-link",
-                              { attrs: { to: "edit-post/" + post.id } },
-                              [_vm._v("Sửa")]
-                            ),
-                            _vm._v(" "),
+                        _c("td", { staticClass: "d-flex" }, [
+                          _c(
+                            "button",
+                            { staticClass: "btn btn-success mr-2 " },
+                            [
+                              _c(
+                                "router-link",
+                                {
+                                  staticClass: "text-white ",
+                                  staticStyle: { "text-decoration": "none" },
+                                  attrs: { to: "edit-post/" + post.id }
+                                },
+                                [_vm._v("Sửa")]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("button", { staticClass: "btn btn-danger " }, [
                             _c(
                               "a",
                               {
+                                staticClass: "text-white ",
                                 attrs: { href: "" },
                                 on: {
                                   click: function($event) {
@@ -91324,9 +91346,8 @@ var render = function() {
                               },
                               [_vm._v("Xóa")]
                             )
-                          ],
-                          1
-                        )
+                          ])
+                        ])
                       ])
                     })
                   )
