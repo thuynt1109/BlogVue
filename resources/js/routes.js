@@ -22,7 +22,8 @@ import HomePost from './components/public/home/HomePost.vue'
 
 import ContactPage from './components/public/contact/ContactPage.vue'
 
-export const routes = [{
+export const routes = [
+    {
         path: '/admin',
         component: AdminHome
     },
