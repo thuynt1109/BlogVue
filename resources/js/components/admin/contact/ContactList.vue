@@ -38,13 +38,18 @@
                                     <td>{{contact.address}}</td>
                                     <td>{{contact.message| sortlength(40,"....")}}</td>
                                     <td>{{contact.created_at}}</td>
-                                     <td></td>
+                                     <td class="text-center">
+                                         <div class="form-check" style="font-size:20px">
+
+                                   <input v-if="contact.status==1" type="checkbox" class="form-check-input "  id="exampleCheck1" checked>
+                                    <input v-else type="checkbox" class="form-check-input "  id="exampleCheck1" >
+                                    </div></td>
                                     <td class="d-flex">
                                         <button class="btn btn-success mr-2 ">Xem chi tiết</button>
                                         <button class="btn btn-danger ">
-                                            <!-- <a href="" @click.prevent = "deletePost(post.id)" class="text-white " > -->
+                                            <a href="" @click.prevent = "deleteContact(contact.id)" class="text-white " >
                                                 Xóa
-                                                <!-- </a> -->
+                                                </a>
                                                 </button>
 
 
@@ -82,21 +87,21 @@
             // ourImage(img){
             //     return "uploadimage/"+img;
             // },
-            // deletePost(id){
-            //    axios.get('/delete/'+id)
+            deleteContact(id){
+               axios.get('/delete-contact/'+id)
 
 
-            //        .then(()=>{
-            //            this.$store.dispatch('gelAllContact')
-            //            toast({
-            //                type: 'success',
-            //                title: 'Xóa thành công'
-            //            })
-            //        })
-            //        .catch(()=>{
+                   .then(()=>{
+                       this.$store.dispatch('gelAllContact')
+                       toast({
+                           type: 'success',
+                           title: 'Xóa thành công'
+                       })
+                   })
+                   .catch(()=>{
 
-            //        })
-            // }
+                   })
+            }
 
         }
     }

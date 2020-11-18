@@ -90075,7 +90075,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -90086,6 +90086,11 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -90171,22 +90176,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         // ourImage(img){
         //     return "uploadimage/"+img;
         // },
-        // deletePost(id){
-        //    axios.get('/delete/'+id)
+        deleteContact: function deleteContact(id) {
+            var _this = this;
 
-
-        //        .then(()=>{
-        //            this.$store.dispatch('gelAllContact')
-        //            toast({
-        //                type: 'success',
-        //                title: 'Xóa thành công'
-        //            })
-        //        })
-        //        .catch(()=>{
-
-        //        })
-        // }
-
+            axios.get('/delete-contact/' + id).then(function () {
+                _this.$store.dispatch('gelAllContact');
+                toast({
+                    type: 'success',
+                    title: 'Xóa thành công'
+                });
+            }).catch(function () {});
+        }
     }
 });
 
@@ -90239,9 +90239,62 @@ var render = function() {
                         _vm._v(" "),
                         _c("td", [_vm._v(_vm._s(contact.created_at))]),
                         _vm._v(" "),
-                        _c("td"),
+                        _c("td", { staticClass: "text-center" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "form-check",
+                              staticStyle: { "font-size": "20px" }
+                            },
+                            [
+                              contact.status == 1
+                                ? _c("input", {
+                                    staticClass: "form-check-input ",
+                                    attrs: {
+                                      type: "checkbox",
+                                      id: "exampleCheck1",
+                                      checked: ""
+                                    }
+                                  })
+                                : _c("input", {
+                                    staticClass: "form-check-input ",
+                                    attrs: {
+                                      type: "checkbox",
+                                      id: "exampleCheck1"
+                                    }
+                                  })
+                            ]
+                          )
+                        ]),
                         _vm._v(" "),
-                        _vm._m(2, true)
+                        _c("td", { staticClass: "d-flex" }, [
+                          _c(
+                            "button",
+                            { staticClass: "btn btn-success mr-2 " },
+                            [_vm._v("Xem chi tiết")]
+                          ),
+                          _vm._v(" "),
+                          _c("button", { staticClass: "btn btn-danger " }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass: "text-white ",
+                                attrs: { href: "" },
+                                on: {
+                                  click: function($event) {
+                                    $event.preventDefault()
+                                    _vm.deleteContact(contact.id)
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                            Xóa\n                                            "
+                                )
+                              ]
+                            )
+                          ])
+                        ])
                       ])
                     })
                   )
@@ -90286,22 +90339,6 @@ var staticRenderFns = [
         _c("th", [_vm._v("Trạng thái")]),
         _vm._v(" "),
         _c("th", [_vm._v("Tác vụ")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", { staticClass: "d-flex" }, [
-      _c("button", { staticClass: "btn btn-success mr-2 " }, [
-        _vm._v("Xem chi tiết")
-      ]),
-      _vm._v(" "),
-      _c("button", { staticClass: "btn btn-danger " }, [
-        _vm._v(
-          "\n                                            Xóa\n                                            "
-        )
       ])
     ])
   }

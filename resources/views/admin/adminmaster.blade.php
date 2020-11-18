@@ -71,7 +71,7 @@
                         <router-link to="/post-list"  class="nav-link">
                             <i class="nav-icon fa fa-th"></i>
                             <p>
-                                Bài đăng
+                                Tin tức
                                 <span class="right badge badge-danger">New</span>
                             </p>
                         </router-link>

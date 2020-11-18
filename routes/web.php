@@ -43,6 +43,7 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Route::post('/contact','ContactContrller@add_contact');
+Route::get('/delete-contact/{id}','ContactContrller@delete_contact');
 
 Route::get('/all-contact','ContactContrller@all_contact');
 

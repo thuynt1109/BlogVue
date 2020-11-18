@@ -28,5 +28,9 @@ class ContactContrller extends Controller
             'contacts'=>$contacts
         ],200);
      }
+     public function delete_contact($id){
+        $contact = Contact::find($id);
+        $contact->delete();
+    }
 
 }
