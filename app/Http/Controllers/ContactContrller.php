@@ -7,10 +7,10 @@ use App\Http\Controllers\Controller;
 
 class ContactContrller extends Controller
 {
-     public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    //  public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
     public function add_contact(Request $request){
 
        $contact = New Contact();
@@ -22,11 +22,11 @@ class ContactContrller extends Controller
        $contact->save();
        return ['message'=>'OK'];
     }
-    public function all_category(){
-        $contact = Contact::all();
+    public function all_contact(){
+        $contacts = Contact::all();
         return response()->json([
-            'contact'=>$contact
+            'contacts'=>$contacts
         ],200);
-    }
+     }
 
 }

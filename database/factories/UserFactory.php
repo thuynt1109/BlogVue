@@ -28,6 +28,15 @@ $factory->define(App\User::class, function (Faker $faker) {
             'cat_name' => $faker->name,
         ];
     });
+    $factory->define(App\Contact::class, function (Faker $faker) {
+        return [
+            'name' => $faker->name,
+            'phone'=>$faker->paragraph,
+            'email'=>$faker->paragraph,
+            'address'=>$faker->paragraph,
+            'message'=>$faker->paragraph,
+        ];
+    });
     $factory->define(App\Post::class, function (Faker $faker) {
         return [
             'cat_id' =>  rand(1,10),

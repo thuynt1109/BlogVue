@@ -42,7 +42,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/update/{id}','PostController@update_post');
 });
 
-Route::post('/add-contact','ContactContrller@add_contact');
+Route::post('/contact','ContactContrller@add_contact');
+
+Route::get('/all-contact','ContactContrller@all_contact');
 
 Route::get('/blogpost','BlogController@get_all_blog_post');
 Route::get('/singlepost/{id}','BlogController@getpost_by_id');

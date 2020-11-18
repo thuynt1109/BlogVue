@@ -111,7 +111,7 @@ class MailgunTransport extends Transport
      */
     protected function getTo(Swift_Mime_SimpleMessage $message)
     {
-        return collect($this->allContacts($message))->map(function ($display, $address) {
+        return collect($this->allcontact($message))->map(function ($display, $address) {
             return $display ? $display." <{$address}>" : $address;
         })->values()->implode(',');
     }
@@ -122,7 +122,7 @@ class MailgunTransport extends Transport
      * @param  \Swift_Mime_SimpleMessage  $message
      * @return array
      */
-    protected function allContacts(Swift_Mime_SimpleMessage $message)
+    protected function allcontact(Swift_Mime_SimpleMessage $message)
     {
         return array_merge(
             (array) $message->getTo(), (array) $message->getCc(), (array) $message->getBcc()

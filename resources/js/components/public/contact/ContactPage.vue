@@ -33,24 +33,24 @@
               <div class="row">
                 <div class="span6 form-group">
                   <input type="text" v-model="form.name" name="name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-control" id="name" placeholder="Tên" data-rule="minlen:4" data-msg="Please enter at least 4 chars"  />
-                  <div class="validation"></div>
+                 <has-error :form="form" field="name"></has-error>
                 </div>
                  <div class="span6 form-group">
-                  <input type="text" name="phone" class="form-control" id="phone" placeholder="Số điện thoại" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
+                  <input type="text"  v-model="form.phone" name="phone" :class="{ 'is-invalid': form.errors.has('phone') }" class="form-control" id="phone" placeholder="Số điện thoại" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                 <has-error :form="form" field="phone"></has-error>
                 </div>
                 <div class="span6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validation"></div>
+                  <input type="email" class="form-control"  v-model="form.email" name="email" :class="{ 'is-invalid': form.errors.has('email') }" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
+                 <has-error :form="form" field="email"></has-error>
                 </div>
                 <div class="span6 form-group">
-                  <input type="text" name="address" class="form-control" id="address" placeholder="Địa chỉ" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validation"></div>
+                  <input type="text"  v-model="form.address" name="address" :class="{ 'is-invalid': form.errors.has('address') }" class="form-control" id="address" placeholder="Địa chỉ" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                 <has-error :form="form" field="address"></has-error>
                 </div>
 
                 <div class="span12 margintop10 form-group">
-                  <textarea class="form-control" name="message" rows="12" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validation"></div>
+                  <textarea class="form-control"  v-model="form.message" name="message" :class="{ 'is-invalid': form.errors.has('message') }" rows="12" data-rule="required" data-msg="Please write something for us" placeholder="Nhập nội dung..."></textarea>
+                 <has-error :form="form" field="message"></has-error>
                   <p class="text-center">
                     <button class="btn btn-large btn-primary margintop10" type="submit">Gửi</button>
                   </p>
@@ -82,7 +82,7 @@ export default {
         },
         methods:{
             addContact(){
-                this.form.post('/add-contact')
+                this.form.post('/contact')
                     .then((response)=>{
                        this.$router.push('/contact')
                         toast({
@@ -96,6 +96,7 @@ export default {
 
             }
         }
+
     }
 
 </script>

@@ -5,13 +5,19 @@ namespace App\Http\Controllers;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Post;
-
+use App\Contact;
 class BlogController extends Controller
 {
     public function  get_all_blog_post(){
         $posts = Post::with('user','category')->orderBy('id','desc')->get();
         return response()->json([
             'posts'=>$posts
+        ],200);
+    }
+    public function  get_all_blog_contact(){
+        $contacts = Contact::all();
+        return response()->json([
+            'contacts'=>$contacts
         ],200);
     }
     public function getpost_by_id($id){
