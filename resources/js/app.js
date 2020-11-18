@@ -25,6 +25,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 Vue.component('admin-main', require('./components/admin/AdminMaster.vue'));
 Vue.component('home-main', require('./components/public/PublicMaster.vue'));
 
+
 // V-form
 import { Form, HasError, AlertError } from 'vform'
 
@@ -33,6 +34,7 @@ Vue.component(AlertError.name, AlertError)
 window.Form = Form;
 // Sweet alert 2
 import swal from 'sweetalert2'
+import Vue from 'vue';
 window.swal = swal;
 const toast = swal.mixin({
     toast: true,

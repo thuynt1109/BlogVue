@@ -73622,6 +73622,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_vform___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_vform__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_sweetalert2__ = __webpack_require__(335);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_sweetalert2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_sweetalert2__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_vue__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_vue__);
 
 __webpack_require__(161);
 window.Vue = __webpack_require__(11);
@@ -73629,31 +73631,32 @@ window.Vue = __webpack_require__(11);
 // editor support
 
 
-Vue.use(__WEBPACK_IMPORTED_MODULE_1_v_markdown_editor___default.a);
+__WEBPACK_IMPORTED_MODULE_9_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_v_markdown_editor___default.a);
 // Support vuex
 
-Vue.use(__WEBPACK_IMPORTED_MODULE_2_vuex__["a" /* default */]);
+__WEBPACK_IMPORTED_MODULE_9_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vuex__["a" /* default */]);
 
 var store = new __WEBPACK_IMPORTED_MODULE_2_vuex__["a" /* default */].Store(__WEBPACK_IMPORTED_MODULE_3__store_index__["a" /* default */]);
 //support moment js
 
 // vue router
 
-Vue.use(__WEBPACK_IMPORTED_MODULE_5_vue_router__["a" /* default */]);
+__WEBPACK_IMPORTED_MODULE_9_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_5_vue_router__["a" /* default */]);
 
 
 
-Vue.component('example-component', __webpack_require__(324));
-Vue.component('admin-main', __webpack_require__(327));
-Vue.component('home-main', __webpack_require__(329));
+__WEBPACK_IMPORTED_MODULE_9_vue___default.a.component('example-component', __webpack_require__(324));
+__WEBPACK_IMPORTED_MODULE_9_vue___default.a.component('admin-main', __webpack_require__(327));
+__WEBPACK_IMPORTED_MODULE_9_vue___default.a.component('home-main', __webpack_require__(329));
 
 // V-form
 
 
-Vue.component(__WEBPACK_IMPORTED_MODULE_7_vform__["HasError"].name, __WEBPACK_IMPORTED_MODULE_7_vform__["HasError"]);
-Vue.component(__WEBPACK_IMPORTED_MODULE_7_vform__["AlertError"].name, __WEBPACK_IMPORTED_MODULE_7_vform__["AlertError"]);
+__WEBPACK_IMPORTED_MODULE_9_vue___default.a.component(__WEBPACK_IMPORTED_MODULE_7_vform__["HasError"].name, __WEBPACK_IMPORTED_MODULE_7_vform__["HasError"]);
+__WEBPACK_IMPORTED_MODULE_9_vue___default.a.component(__WEBPACK_IMPORTED_MODULE_7_vform__["AlertError"].name, __WEBPACK_IMPORTED_MODULE_7_vform__["AlertError"]);
 window.Form = __WEBPACK_IMPORTED_MODULE_7_vform__["Form"];
 // Sweet alert 2
+
 
 window.swal = __WEBPACK_IMPORTED_MODULE_8_sweetalert2___default.a;
 var toast = __WEBPACK_IMPORTED_MODULE_8_sweetalert2___default.a.mixin({
@@ -73671,7 +73674,7 @@ var router = new __WEBPACK_IMPORTED_MODULE_5_vue_router__["a" /* default */]({
 
 });
 
-var app = new Vue({
+var app = new __WEBPACK_IMPORTED_MODULE_9_vue___default.a({
     el: '#app',
     router: router,
     store: store
@@ -88874,51 +88877,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", [
       _c("section", { staticClass: "content" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("h3", { staticClass: "card-title" }, [_vm._v("Title")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-tools" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-tool",
-                  attrs: {
-                    type: "button",
-                    "data-widget": "collapse",
-                    "data-toggle": "tooltip",
-                    title: "Collapse"
-                  }
-                },
-                [_c("i", { staticClass: "fa fa-minus" })]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-tool",
-                  attrs: {
-                    type: "button",
-                    "data-widget": "remove",
-                    "data-toggle": "tooltip",
-                    title: "Remove"
-                  }
-                },
-                [_c("i", { staticClass: "fa fa-times" })]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _vm._v(
-              "\n                Start creating your amazing application .....!\n            "
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-footer" }, [
-            _vm._v("\n                Footer\n            ")
-          ])
-        ])
+        _c(
+          "h2",
+          { staticStyle: { "text-align": "center", "margin-top": "50px" } },
+          [_vm._v("Chào mừng bạn đến với trang quản trị Admin.")]
+        )
       ])
     ])
   }
@@ -91091,7 +91054,7 @@ var render = function() {
                         _vm._v(" "),
                         _c("p", [
                           _vm._v(
-                            "\n               " +
+                            "\r\n                                    " +
                               _vm._s(
                                 _vm._f("sortlength")(
                                   post.description,
@@ -91099,7 +91062,7 @@ var render = function() {
                                   "..."
                                 )
                               ) +
-                              "\n              "
+                              "\r\n                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -92857,7 +92820,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -92917,14 +92880,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: "HomePost",
@@ -92966,17 +92921,18 @@ var render = function() {
     _vm._m(0),
     _vm._v(" "),
     _c("section", { attrs: { id: "content" } }, [
-      _c(
-        "div",
-        { staticClass: "container" },
-        _vm._l(_vm.blogpost, function(post) {
-          return _c("article", [
-            _c("div", { staticClass: "row" }, [
-              _c(
-                "div",
-                { staticClass: "span4" },
-                [
-                  _c("div", { staticClass: "post-image" }, [
+      _c("div", { staticClass: "container" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "row" },
+          _vm._l(_vm.blogpost, function(post, index) {
+            return index < 4
+              ? _c(
+                  "div",
+                  { staticClass: "span6" },
+                  [
                     _c("div", { staticClass: "post-heading" }, [
                       _c(
                         "h6",
@@ -92991,39 +92947,56 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _c("img", {
-                      attrs: { src: "uploadimage/" + post.photo, alt: "" }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n               " +
-                        _vm._s(
-                          _vm._f("sortlength")(post.description, 500, "...")
-                        ) +
-                        "\n              "
+                    _c(
+                      "div",
+                      { staticClass: "post-image" },
+                      [
+                        _c(
+                          "router-link",
+                          { attrs: { to: "/blog/" + post.id, href: "#" } },
+                          [
+                            _c("img", {
+                              attrs: {
+                                src: "uploadimage/" + post.photo,
+                                alt: ""
+                              }
+                            })
+                          ]
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("p", [
+                        _vm._v(
+                          "\r\n                            " +
+                            _vm._s(
+                              _vm._f("sortlength")(post.description, 200, "...")
+                            ) +
+                            "\r\n                        "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "router-link",
+                      {
+                        staticClass: "pull-right",
+                        attrs: { to: "/blog/" + post.id }
+                      },
+                      [
+                        _vm._v("Xem chi tiết"),
+                        _c("i", { staticClass: "icon-angle-right" })
+                      ]
                     )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "router-link",
-                    {
-                      staticClass: "pull-right",
-                      attrs: { to: "/blog/" + post.id }
-                    },
-                    [
-                      _vm._v("Xem chi tiết"),
-                      _c("i", { staticClass: "icon-angle-right" })
-                    ]
-                  )
-                ],
-                1
-              )
-            ])
-          ])
-        })
-      )
+                  ],
+                  1
+                )
+              : _vm._e()
+          })
+        )
+      ])
     ])
   ])
 }
@@ -93035,26 +93008,30 @@ var staticRenderFns = [
     return _c("section", { attrs: { id: "inner-headline" } }, [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "span4" }, [
-            _c("div", { staticClass: "inner-heading" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "span8" }, [
+          _c("div", { staticClass: "span12" }, [
             _c("ul", { staticClass: "breadcrumb" }, [
               _c("li", [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("i", { staticClass: "icon-home" })
-                ]),
+                _c("i", { staticClass: "icon-home" }),
                 _c("i", { staticClass: "icon-angle-right" })
               ]),
               _vm._v(" "),
               _c("li", [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("Trang chủ")]),
+                _vm._v("\r\n                            Trang chủ"),
                 _c("i", { staticClass: "icon-angle-right" })
               ])
             ])
           ])
         ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("h5", { staticStyle: { "font-weight": "bold" } }, [
+        _vm._v("TIN NỔI BẬT")
       ])
     ])
   }

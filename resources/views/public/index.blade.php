@@ -34,177 +34,40 @@
 <body>
 <div id="app">
     <div id="wrapper" >
-        <!-- toggle top area -->
-        <div class="hidden-top">
-            <div class="hidden-top-inner container">
-                <div class="row">
-                    <div class="span12">
-                        <ul>
-                            <li><strong>We are available for any custom works this month</strong></li>
-                            <li>Main office: Springville center X264, Park Ave S.01</li>
-                            <li>Call us <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end toggle top area -->
         <!-- start header -->
-        <header>
-            <div class="container ">
-                <!-- hidden top area toggle link -->
-                <div id="header-hidden-link">
-                    <a href="#" class="toggle-link" title="Click me you'll get a surprise" data-target=".hidden-top"><i></i>Open</a>
-                </div>
-                <!-- end toggle link -->
-                <div class="row nomargin">
-                    <div class="span12">
-                        <div class="headnav">
-                            <ul>
-                                <li><a href="#mySignup" data-toggle="modal"><i class="icon-user"></i> Đăng ký</a></li>
-                                <li><a href="#mySignin" data-toggle="modal">Đăng nhập</a></li>
-                            </ul>
-                        </div>
-                        <!-- Signup Modal -->
-                        <div id="mySignup" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySignupModalLabel" aria-hidden="true">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 id="mySignupModalLabel">Create an <strong>account</strong></h4>
-                            </div>
-                            <div class="modal-body">
-                                <form class="form-horizontal">
-                                    <div class="control-group">
-                                        <label class="control-label" for="inputEmail">Email</label>
-                                        <div class="controls">
-                                            <input type="text" id="inputEmail" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="inputSignupPassword">Mật khẩu</label>
-                                        <div class="controls">
-                                            <input type="password" id="inputSignupPassword" placeholder="Mật khẩu">
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="inputSignupPassword2">Nhập lại mật khẩu</label>
-                                        <div class="controls">
-                                            <input type="password" id="inputSignupPassword2" placeholder="Mật khẩu">
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <button type="submit" class="btn">Đăng ký</button>
-                                        </div>
-                                        <p class="aligncenter margintop20">
-                                            Bạn chưa có tài khoản? <a href="#mySignin" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Đăng ký</a>
-                                        </p>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <!-- end signup modal -->
-                        <!-- Sign in Modal -->
-                        <div id="mySignin" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="mySigninModalLabel" aria-hidden="true">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 id="mySigninModalLabel">Login to your <strong>account</strong></h4>
-                            </div>
-                            <div class="modal-body">
-                                <form class="form-horizontal">
-                                    <div class="control-group">
-                                        <label class="control-label" for="inputText">Tên đăng nhập</label>
-                                        <div class="controls">
-                                            <input type="text" id="inputText" placeholder="Tên đăng nhập">
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="inputSigninPassword">Mật khẩu</label>
-                                        <div class="controls">
-                                            <input type="password" id="inputSigninPassword" placeholder="Mật khẩu">
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <button type="submit" class="btn">Đăng nhập</button>
-                                        </div>
-                                        <p class="aligncenter margintop20">
-                                            Quân mật khẩu? <a href="#myReset" data-dismiss="modal" aria-hidden="true" data-toggle="modal">Đặt lại mật khẩu</a>
-                                        </p>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <!-- end signin modal -->
-                        <!-- Reset Modal -->
-                        <div id="myReset" class="modal styled hide fade" tabindex="-1" role="dialog" aria-labelledby="myResetModalLabel" aria-hidden="true">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h4 id="myResetModalLabel">Reset your <strong>password</strong></h4>
-                            </div>
-                            <div class="modal-body">
-                                <form class="form-horizontal">
-                                    <div class="control-group">
-                                        <label class="control-label" for="inputResetEmail">Email</label>
-                                        <div class="controls">
-                                            <input type="text" id="inputResetEmail" placeholder="Email">
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <button type="submit" class="btn">Đặt lại mật khẩu</button>
-                                        </div>
-                                        <p class="aligncenter margintop20">
-
-                                        </p>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <!-- end reset modal -->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="span4">
-                        <div class="logo" style="width:30%;height:10%">
-                            <a href="#"><img src="{{asset("assets/public/asset/img/")}}/logo3.png" alt="" class="logo" /></a>
-
-                        </div>
-                    </div>
-                    <div class="span8">
-                        <div class="navbar navbar-static-top">
-                            <div class="navigation">
+            <div class="container">
+                <div class="row" style="background-color:#aee2ae">
+                    <div class="navbar navbar-static-top">
                                 <nav>
                                     <ul class="nav topnav">
-                                        <li class="dropdown active">
-                                            <a href="index.html">Home <i class="icon-angle-down"></i></a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="index-alt2.html">Homepage 2</a></li>
-                                                <li><a href="index-alt3.html">Homepage 3</a></li>
-                                            </ul>
-                                        </li>
                                         <li >
                                             <router-link to="/home">Trang chủ </router-link>
-
                                         </li>
-
-
                                         <li>
                                             <router-link to="/blog">Tin Tức </router-link>
                                         </li>
                                         <li>
-
                                        <router-link to="/contact">Liên hệ </router-link>
-
                                         </li>
                                     </ul>
                                 </nav>
-                            </div>
-                            <!-- end navigation -->
+                    </div>
+                </div>
+                <div class="row" >
+                    <div class="span2">
+                        <div class="logo" style="width:200px;height:140px">
+                            <img src="{{asset("assets/public/asset/img/")}}/logo3.png" alt="" class="logo" style="height:140px" />
+                        </div>
+
+                    </div>
+                    <div class="span10">
+                        <div class="logo" style="width:100%;height:140px">
+                            <img src="{{asset("assets/public/asset/img/")}}/logo-2.jpg" alt="" class="logo" style="margin-left:100px;width:700px;height:fit-content" />
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
+
         <!-- end header -->
         {{--Vue Routing--}}
         <home-main></home-main>
@@ -213,27 +76,24 @@
                 <div class="row">
                     <div class="span3">
                         <div class="widget">
-                            <h5 class="widgetheading">Giới thiệu</h5>
+                            <h5 class="widgetheading">Tin nổi bật</h5>
 
                         </div>
                     </div>
                     <div class="span3">
                         <div class="widget">
-                            <h5 class="widgetheading">Góp ý</h5>
+                            <h5 class="widgetheading">Tin hàng ngày</h5>
 
                         </div>
                     </div>
                     <div class="span3">
                         <div class="widget">
-                            <h5 class="widgetheading">Đầu trang</h5>
+                            <h5 class="widgetheading">Danh mục</h5>
 
-                            <div class="clear">
-                            </div>
                         </div>
                     </div>
                     <div class="span3">
                         <div class="widget">
-                            <h5 class="widgetheading"></h5>
                             <address>
                                280 An Dương Vương-Phường 4-Quận 5-Thành Phố Hồ Chí Minh
                             </address>

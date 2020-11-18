@@ -1,90 +1,82 @@
 <template>
-    <span id="homepost">
-         <!-- end header -->
+<span id="homepost">
+    <!-- end header -->
     <section id="inner-headline">
-      <div class="container">
-        <div class="row">
-          <div class="span4">
-            <div class="inner-heading">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <ul class="breadcrumb">
+                        <li><i class="icon-home"></i><i class="icon-angle-right"></i></li>
+                        <li>
+                            Trang chủ<i class="icon-angle-right"></i>
+                        </li>
 
+                    </ul>
+                </div>
             </div>
-          </div>
-          <div class="span8">
-            <ul class="breadcrumb">
-              <li><a href="#"><i class="icon-home"></i></a><i class="icon-angle-right"></i></li>
-              <li><a href="#">Trang chủ</a><i class="icon-angle-right"></i></li>
-
-            </ul>
-          </div>
         </div>
-      </div>
     </section>
     <section id="content">
-      <div class="container">
+        <div class="container">
+            <div class="row">
+                <h5 style="font-weight:bold">TIN NỔI BẬT</h5>
+            </div>
+            <div class="row">
+                <div class="span6" v-for="(post,index) in blogpost" v-if="index<4">
 
-
-            <article v-for="post in blogpost">
-              <div class="row">
-                <div class="span4">
-                  <div class="post-image">
                     <div class="post-heading">
-                      <h6><router-link :to="`/blog/${post.id}`" href="#">{{post.title}}</router-link></h6>
+                        <h6>
+                            <router-link :to="`/blog/${post.id}`" href="#">{{post.title}}</router-link>
+                        </h6>
                     </div>
-                    <img :src="`uploadimage/${post.photo}`" alt="" />
-                  </div>
-                  <p>
-                   {{post.description | sortlength(500,"...")}}
-                  </p>
-                  <!-- <div class="bottom-article"> -->
-                    <!-- <ul class="meta-post">
-                      <li><i class="icon-calendar"></i><a href="#"> {{post.user.created_at}}</a></li>
-                      <li v-if="post.user"><i class="icon-user"></i><a href="#">{{post.user.name}}</a></li>
-                      <li v-if="post.category"><i class="icon-folder-open"></i><a href="#"> {{post.category.cat_name}}</a></li>
-                      <li><i class="icon-comments"></i><a href="#">4 Comments</a></li>
-                    </ul> -->
+                    <div class="post-image">
+                        <router-link :to="`/blog/${post.id}`" href="#"><img :src="`uploadimage/${post.photo}`" alt="" /></router-link>
+                    </div>
+                    <div>
+                        <p>
+                            {{post.description | sortlength(200,"...")}}
+                        </p>
+                    </div>
+
                     <router-link :to="`/blog/${post.id}`" class="pull-right">Xem chi tiết<i class="icon-angle-right"></i></router-link>
-                  <!-- </div> -->
                 </div>
-              </div>
-            </article>
+            </div>
 
-
-          </div>
+        </div>
     </section>
-    </span>
+</span>
 </template>
 
 <script>
+export default {
+    name: "HomePost",
+    components: {
 
-    export default {
-        name: "HomePost",
-        components:{
+    },
+    mounted() {
+        this.$store.dispatch('getblogPost');
+    },
+    computed: {
+        blogpost() {
+            return this.$store.getters.getblogPost
+        }
+    },
+    methods: {
+        getAllCategoryPost() {
+            if (this.$route.params.id != null) {
+                this.$store.dispatch('getPostByCatId', this.$route.params.id);
+            } else {
+                this.$store.dispatch('getblogPost');
+            }
 
-        },
-        mounted(){
-            this.$store.dispatch('getblogPost');
-        },
-        computed:{
-            blogpost(){
-                return this.$store.getters.getblogPost
-            }
-        },
-        methods:{
-            getAllCategoryPost(){
-                if(this.$route.params.id!=null){
-                    this.$store.dispatch('getPostByCatId',this.$route.params.id);
-                }else{
-                    this.$store.dispatch('getblogPost');
-                }
-
-            }
-        },
-        watch:{
-            $route(to,from){
-                this.getAllCategoryPost();
-            }
+        }
+    },
+    watch: {
+        $route(to, from) {
+            this.getAllCategoryPost();
         }
     }
+}
 </script>
 
 <style scoped>
