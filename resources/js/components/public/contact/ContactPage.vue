@@ -26,31 +26,28 @@
           <div class="span12">
             <h4 class="m-4"><strong>Liên hệ với chúng tôi bằng cách điền vào biểu mẫu vào bên dưới</strong></h4>
 
-            <form action="" method="post" role="form" class="contactForm ">
+            <form action="" method="post" role="form" class="contactForm " @submit.prevent="addContact()">
               <div id="sendmessage"></div>
               <div id="errormessage"></div>
 
               <div class="row">
-                <div class="span4 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Tên" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="span6 form-group">
+                  <input type="text" v-model="form.name" name="name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-control" id="name" placeholder="Tên" data-rule="minlen:4" data-msg="Please enter at least 4 chars"  />
                   <div class="validation"></div>
                 </div>
-                 <div class="span4 form-group">
+                 <div class="span6 form-group">
                   <input type="text" name="phone" class="form-control" id="phone" placeholder="Số điện thoại" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
                 </div>
-                <div class="span4 form-group">
+                <div class="span6 form-group">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email" data-msg="Please enter a valid email" />
                   <div class="validation"></div>
                 </div>
-                <div class="span4 form-group">
+                <div class="span6 form-group">
                   <input type="text" name="address" class="form-control" id="address" placeholder="Địa chỉ" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
                 </div>
-                <div class="span4 form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Nội dung..." data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validation"></div>
-                </div>
+
                 <div class="span12 margintop10 form-group">
                   <textarea class="form-control" name="message" rows="12" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                   <div class="validation"></div>
@@ -71,8 +68,36 @@ export default {
     name:"ContactPage",
     components:{
 
+    },
+    data(){
+            return {
+                form: new Form({
+                    name:'',
+                    phone:'',
+                    email:'',
+                    address:'',
+                    message:'',
+                })
+            }
+        },
+        methods:{
+            addContact(){
+                this.form.post('/add-contact')
+                    .then((response)=>{
+                       this.$router.push('/contact')
+                        toast({
+                            type: 'success',
+                            title: 'Thêm danh mục thành công'
+                        })
+                    })
+                    .catch(()=>{
+
+                    })
+
+            }
+        }
     }
-}
+
 </script>
 <style scoped>
 

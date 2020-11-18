@@ -4,14 +4,11 @@ import AdminHome from './components/admin/AdminHome.vue'
 import CategoryList from './components/admin/category/List.vue'
 import AddCategory from './components/admin/category/New.vue'
 import EditCategory from './components/admin/category/Edit.vue'
-
+import ContactList from './components/admin/contact/ContactList.vue'
 // FrontEnd Component
 import PublicHome from './components/public/PublicHome.vue'
 import BlogPost from './components/public/blog/BlogPost.vue'
 import SinglePost from './components/public/blog/SingleBlog.vue'
-
-
-
 
 // Post
 import PostList from './components/admin/post/List.vue'
@@ -79,6 +76,11 @@ export const routes = [{
         path: '/contact',
         name: 'ContactPage',
         component: ContactPage
+    },
+    {
+        path: '/admin-contact',
+        name: 'ContactList',
+        component: ContactList
     },
 
 

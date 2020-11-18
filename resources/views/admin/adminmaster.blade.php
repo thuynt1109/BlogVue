@@ -76,6 +76,15 @@
                             </p>
                         </router-link>
                     </li>
+                    <li class="nav-item">
+                        <router-link to="/admin-contact" class="nav-link">
+                            <i class="nav-icon fa fa-th"></i>
+                            <p>
+                                Liên hệ
+
+                            </p>
+                        </router-link>
+                    </li>
                     <li class="nav-item ">
 
                         <a class="nav-link" href="{{ route('logout') }}"

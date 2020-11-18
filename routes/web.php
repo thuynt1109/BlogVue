@@ -33,6 +33,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('editcategory/{id}','CategoryController@edit_category');
     Route::post('update-category/{id}','CategoryController@update_category');
     Route::get('/deletecategory/{id}','CategoryController@selected_category');
+
 //Post
     Route::get('/post','PostController@all_Post');
     Route::post('/savepost','PostController@save_post');
@@ -41,7 +42,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/update/{id}','PostController@update_post');
 });
 
-
+Route::post('/add-contact','ContactContrller@add_contact');
 
 Route::get('/blogpost','BlogController@get_all_blog_post');
 Route::get('/singlepost/{id}','BlogController@getpost_by_id');
