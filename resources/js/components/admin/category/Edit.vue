@@ -61,7 +61,7 @@
 
                         toast({
                             type: 'success',
-                            title: 'Category Updated successfully'
+                            title: 'Sửa danh mục thành công!'
                         })
                     })
                     .catch(()=>{

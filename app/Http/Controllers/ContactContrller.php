@@ -19,6 +19,7 @@ class ContactContrller extends Controller
        $contact->email = $request->email;
        $contact->address = $request->address;
        $contact->message = $request->message;
+       $contact->status ="0";
        $contact->save();
        return ['message'=>'OK'];
     }

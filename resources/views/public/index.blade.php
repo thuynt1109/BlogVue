@@ -39,9 +39,9 @@
                 <div class="row" style="background-color:#aee2ae">
                     <div class="navbar navbar-static-top">
                                 <nav>
-                                    <ul class="nav topnav">
+                                    <ul class="nav topnav" >
                                         <li >
-                                            <router-link to="/home">Trang chủ </router-link>
+                                            <router-link to="/home" >Trang chủ </router-link>
                                         </li>
                                         <li>
                                             <router-link to="/blog">Tin Tức </router-link>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="span10">
                         <div class="logo" style="width:100%;height:140px">
-                            <img src="{{asset("assets/public/asset/img/")}}/logo-2.jpg" alt="" class="logo" style="margin-left:100px;width:700px;height:fit-content" />
+                            <img src="{{asset("assets/public/asset/img/")}}/banner.png" alt="" class="logo" style="margin-left:100px;width:700px;height:fit-content" />
                         </div>
                     </div>
                 </div>

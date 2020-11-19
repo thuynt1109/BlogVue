@@ -29,7 +29,7 @@
                             <div class="span8">
                                 <div class="post-image">
                                     <div class="post-heading">
-                                        <h3><a href="#">{{post.title}}</a></h3>
+                                        <h6><a href="#">{{post.title}}</a></h6>
                                     </div>
                                     <img :src="`uploadimage/${post.photo}`" alt="" />
                                 </div>
@@ -39,9 +39,9 @@
                                 <div class="bottom-article">
                                     <ul class="meta-post">
                                         <li><i class="icon-calendar"></i><a href="#"> {{post.user.created_at}}</a></li>
-                                        <li v-if="post.user"><i class="icon-user"></i><a href="#">{{post.user.name}}</a></li>
+                                        <!-- <li v-if="post.user"><i class="icon-user"></i><a href="#">{{post.user.name}}</a></li> -->
                                         <li v-if="post.category"><i class="icon-folder-open"></i><a href="#"> {{post.category.cat_name}}</a></li>
-                                        <li><i class="icon-comments"></i><a href="#">4 Comments</a></li>
+                                        <!-- <li><i class="icon-comments"></i><a href="#">4 Comments</a></li> -->
                                     </ul>
                                     <router-link :to="`/blog/${post.id}`" class="pull-right">Xem chi tiết<i class="icon-angle-right"></i></router-link>
                                 </div>

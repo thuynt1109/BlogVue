@@ -89868,7 +89868,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
                 toast({
                     type: 'success',
-                    title: 'Category Updated successfully'
+                    title: 'Sửa danh mục thành công!'
                 });
             }).catch(function () {});
         }
@@ -90890,13 +90890,14 @@ var render = function() {
                       attrs: {
                         src: "uploadimage/" + post.photo,
                         alt: "",
-                        width: "40",
-                        height: "40"
+                        width: "50",
+                        height: "50"
                       }
                     }),
                     _vm._v(" "),
                     _c(
                       "h6",
+                      { staticStyle: { "font-size": "16px" } },
                       [
                         _c(
                           "router-link",
@@ -90911,7 +90912,7 @@ var render = function() {
                       _vm._v(
                         "\n                 " +
                           _vm._s(
-                            _vm._f("sortlength")(post.description, 100, "....")
+                            _vm._f("sortlength")(post.description, 80, "....")
                           ) +
                           "\n                "
                       )
@@ -90962,7 +90963,7 @@ var render = function() {
                       _c("div", { staticClass: "span8" }, [
                         _c("div", { staticClass: "post-image" }, [
                           _c("div", { staticClass: "post-heading" }, [
-                            _c("h3", [
+                            _c("h6", [
                               _c("a", { attrs: { href: "#" } }, [
                                 _vm._v(_vm._s(post.title))
                               ])
@@ -90976,7 +90977,7 @@ var render = function() {
                         _vm._v(" "),
                         _c("p", [
                           _vm._v(
-                            "\r\n                                    " +
+                            "\n                                    " +
                               _vm._s(
                                 _vm._f("sortlength")(
                                   post.description,
@@ -90984,7 +90985,7 @@ var render = function() {
                                   "..."
                                 )
                               ) +
-                              "\r\n                                "
+                              "\n                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -91000,15 +91001,6 @@ var render = function() {
                                 ])
                               ]),
                               _vm._v(" "),
-                              post.user
-                                ? _c("li", [
-                                    _c("i", { staticClass: "icon-user" }),
-                                    _c("a", { attrs: { href: "#" } }, [
-                                      _vm._v(_vm._s(post.user.name))
-                                    ])
-                                  ])
-                                : _vm._e(),
-                              _vm._v(" "),
                               post.category
                                 ? _c("li", [
                                     _c("i", {
@@ -91020,9 +91012,7 @@ var render = function() {
                                       )
                                     ])
                                   ])
-                                : _vm._e(),
-                              _vm._v(" "),
-                              _vm._m(1, true)
+                                : _vm._e()
                             ]),
                             _vm._v(" "),
                             _c(
@@ -91044,7 +91034,7 @@ var render = function() {
                   ])
                 }),
                 _vm._v(" "),
-                _vm._m(2)
+                _vm._m(1)
               ],
               2
             ),
@@ -91086,15 +91076,6 @@ var staticRenderFns = [
           ])
         ])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("i", { staticClass: "icon-comments" }),
-      _c("a", { attrs: { href: "#" } }, [_vm._v("4 Comments")])
     ])
   },
   function() {
@@ -92742,7 +92723,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -92753,6 +92734,43 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -92846,78 +92864,82 @@ var render = function() {
       _c("div", { staticClass: "container" }, [
         _vm._m(1),
         _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "row" },
-          _vm._l(_vm.blogpost, function(post, index) {
-            return index < 4
-              ? _c(
-                  "div",
-                  { staticClass: "span6" },
-                  [
-                    _c("div", { staticClass: "post-heading" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("section", { attrs: { id: "projects" } }, [
+            _c("ul", { staticClass: "portfolio", attrs: { id: "thumbs" } }, [
+              _c(
+                "div",
+                _vm._l(_vm.blogpost, function(post, index) {
+                  return _c(
+                    "li",
+                    {
+                      staticClass: "item-thumbs span3 design mb-4 ",
+                      attrs: { "data-id": "id-0", "data-type": "web" }
+                    },
+                    [
                       _c(
-                        "h6",
+                        "router-link",
+                        { attrs: { to: "/blog/" + post.id, href: "#" } },
+                        [
+                          _c("img", {
+                            staticClass: "hover-wrap ",
+                            attrs: {
+                              src: "uploadimage/" + post.photo,
+                              alt: "",
+                              "data-fancybox-group": "gallery",
+                              title: ""
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "overlay-img" }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "overlay-img-thumb " })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("img", {
+                        staticClass: "client-logo",
+                        attrs: { src: "uploadimage/" + post.photo, alt: "" }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "strong",
                         [
                           _c(
                             "router-link",
                             { attrs: { to: "/blog/" + post.id, href: "#" } },
-                            [_vm._v(_vm._s(post.title))]
+                            [
+                              _vm._v(
+                                _vm._s(
+                                  _vm._f("sortlength")(post.title, 50, "...")
+                                )
+                              )
+                            ]
                           )
                         ],
                         1
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "post-image" },
-                      [
-                        _c(
-                          "router-link",
-                          { attrs: { to: "/blog/" + post.id, href: "#" } },
-                          [
-                            _c("img", {
-                              attrs: {
-                                src: "uploadimage/" + post.photo,
-                                alt: ""
-                              }
-                            })
-                          ]
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c("div", [
-                      _c("p", [
+                      ),
+                      _vm._v(" "),
+                      _c("p", { staticStyle: { "font-size": "13px" } }, [
                         _vm._v(
-                          "\r\n                            " +
-                            _vm._s(
-                              _vm._f("sortlength")(post.description, 200, "...")
-                            ) +
-                            "\r\n                        "
+                          _vm._s(
+                            _vm._f("sortlength")(post.description, 100, "...")
+                          )
                         )
+                      ]),
+                      _vm._v(" "),
+                      _c("i", { staticClass: "icon-calendar " }),
+                      _c("span", { attrs: { href: "#" } }, [
+                        _vm._v(" " + _vm._s(post.user.created_at))
                       ])
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "router-link",
-                      {
-                        staticClass: "pull-right",
-                        attrs: { to: "/blog/" + post.id }
-                      },
-                      [
-                        _vm._v("Xem chi tiết"),
-                        _c("i", { staticClass: "icon-angle-right" })
-                      ]
-                    )
-                  ],
-                  1
-                )
-              : _vm._e()
-          })
-        )
+                    ],
+                    1
+                  )
+                })
+              )
+            ])
+          ])
+        ])
       ])
     ])
   ])
@@ -92938,7 +92960,7 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("li", [
-                _vm._v("\r\n                            Trang chủ"),
+                _vm._v("\n                            Trang chủ"),
                 _c("i", { staticClass: "icon-angle-right" })
               ])
             ])

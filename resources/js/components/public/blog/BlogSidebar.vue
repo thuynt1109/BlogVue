@@ -21,10 +21,10 @@
                 <ul class="recent">
 
                   <li v-for="(post,index ) in blogpost"  v-if="index<5">
-                    <img :src="`uploadimage/${post.photo}`" class="pull-left" alt="" width="40" height="40"/>
-                    <h6><router-link :to="`/blog/${post.id}`">{{post.title}}</router-link></h6>
+                    <img :src="`uploadimage/${post.photo}`" class="pull-left" alt="" width="50" height="50"/>
+                    <h6 style="font-size:16px"><router-link :to="`/blog/${post.id}`">{{post.title}}</router-link></h6>
                     <p>
-                     {{post.description | sortlength(100,"....")}}
+                     {{post.description | sortlength(80,"....")}}
                     </p>
                   </li>
 
